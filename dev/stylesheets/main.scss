@@ -1,0 +1,20 @@
+@import "base/_mixin.scss";
+
+body {
+  color: red;
+  background: red;
+  h1 {
+    color: green;
+    &:hover {
+      color: yellow;
+      cursor: pointer;
+    }
+  }
+  p {
+    color: red;
+  }
+  .padding-first-par {
+    padding-bottom: 101px
+  }
+}
+
