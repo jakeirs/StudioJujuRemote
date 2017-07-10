@@ -7,5 +7,25 @@
   &--small {
     max-width: 950px;
   }
+
+  &--left {    
+    max-width: 970px;
+    margin-left: auto;
+    padding: 50px 25px;
+    @include atMedium {
+      padding: 60px 70px;
+      text-align: left;      
+    }
+  }  
+
+  &--right {
+    max-width: 970px;
+    margin-right: auto;
+    padding: 50px 25px;
+    @include atMedium {
+      padding: 60px 70px;
+      text-align: left;
+    }
+  }
 }  
   

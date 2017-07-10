@@ -1,8 +1,10 @@
 @import "normalize";
 @include normalize();
+@import "base/_mixins.scss";
 @import "base/_variables.scss";
 @import "base/_global.scss";
-@import "base/_mixins.scss";
+
+
 @import "modules/_large-hero.scss";
 @import "modules/_nav-main.scss";
 @import "modules/_social-media.scss";
@@ -11,6 +13,11 @@
 @import "modules/_headline.scss";
 @import "modules/_button.scss";
 @import "modules/_grid.scss";
+@import "modules/_team-member.scss";
+@import "modules/_gallery.scss";
+@import "modules/_blog-post.scss";
+
+@import "theme/_background-dark.scss";
 
 
 

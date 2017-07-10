@@ -1,0 +1,53 @@
+.blog-post {
+  max-width: 450px;
+  width: 100%;
+  &:not(:last-child) {
+    margin-bottom: 0;
+  }
+  @include atMedium {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+  
+  @include atMedium {
+    width: 28%;
+  }
+
+  &__header {
+    line-height: 2;
+    padding-bottom: 50px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    
+  }
+
+  &__author,
+  &__date {
+    font-family: 'Lato', Helvetica, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+  }
+
+  &__author {    
+  }
+
+  &__date {    
+  }
+
+  &__taxonomy {
+    font-size: 0.75rem;
+    color: $lightGrey;
+  }
+
+  &__photo {
+    margin-bottom: 35px;
+    width: 100%;
+  }
+
+  &__excerpt {
+    text-align: left;
+  }
+}

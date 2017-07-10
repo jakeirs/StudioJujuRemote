@@ -3,12 +3,12 @@ $columnCount: 12;
 // default width 100% for mobile
 [class*='col-'] { 
   width: 100%;
-  float: none;      
-}
+  float: none;   
+} 
 
-@include atLarge {
+@include atSmall {
   @for $i from 1 through $columnCount { 
-    .large-col-#{$i} {
+    .col-small-#{$i} {
       width: (100%/$columnCount) * $i; 
       float: left;   
     }
@@ -17,16 +17,16 @@ $columnCount: 12;
 
 @include atMedium {
   @for $i from 1 through $columnCount { 
-    .medium-col-#{$i} {
+    .col-medium-#{$i} {
       width: (100%/$columnCount) * $i; 
       float: left;   
     }
   }
 }
 
-@include atSmall {
+@include atLarge {
   @for $i from 1 through $columnCount { 
-    .small-col-#{$i} {
+    .col-large-#{$i} {
       width: (100%/$columnCount) * $i; 
       float: left;   
     }
@@ -34,5 +34,20 @@ $columnCount: 12;
 }
 
 .row {
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+  
+  @include atSmall {
+    justify-content: space-around;    
+  }
+
+  &--grid {    
   @extend %clearfix;
+  }
 }
+
+.col-gutter--gallery {
+  padding-left: 6px;
+  padding-right: 6px;
+}  

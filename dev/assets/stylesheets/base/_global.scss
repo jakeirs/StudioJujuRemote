@@ -1,4 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  font-size: 1.125rem;
+  font-size: 0.875rem; 
+  @include atSmall {
+     
+    font-size: 1.125rem;  
+  }
+}
+
+a {
+  text-decoration: none;
+  &:hover,
+  &:visited,
+  &:active {
+    color: inherit;
+  }
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
 }
