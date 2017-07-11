@@ -1,6 +1,4 @@
 @import "base/_reset.scss";
-@import "normalize";
-@include normalize();
 @import "base/_mixins.scss";
 @import "base/_variables.scss";
 @import "base/_global.scss";
@@ -17,6 +15,7 @@
 @import "modules/_gallery.scss";
 @import "modules/_blog-post.scss";
 @import "modules/_contact.scss";
+@import "modules/_inputs.scss";
 
 
 @import "theme/_background-dark.scss";
