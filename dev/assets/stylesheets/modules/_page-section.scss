@@ -1,11 +1,11 @@
 .page-section {
   padding-top: 70px;
-  &:not(::last-child) {
+  &:not(:last-child) {
     padding-bottom: 70px;
   }
   @include atMedium {
     padding-top: 125px;
-    &:not(::last-child) {
+    &:not(:last-child) {
       padding-bottom: 125px;
     }
   }
@@ -24,4 +24,17 @@
   }
 }
 
+header {
+  padding-bottom: 70px;
+  @include atMedium {
+    padding-bottom: 125px;
+  }
+}
+
+#contact {
+  padding-top: 70px;
+  @include atMedium {
+    padding-top: 125px;
+  }
+}
 

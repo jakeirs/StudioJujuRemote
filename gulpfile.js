@@ -51,6 +51,10 @@ gulp.task('pug', function() {
     pretty: true,
     doctype: 'html'
   }))
+  .on('error', function(errorInfo){
+    console.log(errorInfo.toString());
+    this.emit('end');
+  }) 
   .pipe(gulp.dest('./build/'))
 });
 
