@@ -6,143 +6,140 @@ html
     title Juju Studio
     link(rel="stylesheet" href="assets/stylesheets/main.css") 
   body
-    header
-      .large-hero
-        
-      nav.nav.nav--right
-        ul.nav__list.nav__list--inline
-          li.nav__item
-            a About Us
-          li.nav__item
-            a Our Team
-          li.nav__item
-            a Gallery
-          li.nav__item
-            a FAQ
-          li.nav__item
-            a Pre Care Advice
-          li.nav__item
-            a Tatto Courses
-          li.nav__item
-            a Blog
-          li.nav__item
-            a Contact
-          li.nav__item.nav__item--standout
-            a pl
-
-      .social-media   
-        ul.social-media__list
-          li.social-media__item F
-          li.social-media__item F
-          li.social-media__item F 
-
-    section#about-us.page-section
-      .wrapper.wrapper--small
-        h2.headline About Us
-        .page-section__content.page-section__content--padding-bot
-          |  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac risus molestie, venenatis erat vitae, lobortis dolor. Aliquam erat volutpat. Aenean velit neque, consequat sollicitudin turpis quis, rhoncus tempor lorem. Quisque vitae dolor eget nunc posuere interdum sed ultrices justo. Quisque laoreet a mauris quis tempor. Phasellus sollicitudin cursus facilisis. Phasellus massa ante, lacinia ac metus eu, dapibus lacinia nisl.
-        a.btn(href!="#") More
-
-    section#our-team.page-section
-      .wrapper
-        h2.headline Our team
-        .page-section__content.row        
-          .team-member
-            img.team-member__photo(src="assets/img/artist-1.jpg")
-            .team-member__title Kate Janczarek
-            .team-member__subtitle tatoo artist
-          .team-member
-            img.team-member__photo(src="assets/img/artist-2.jpg")
-            .team-member__title Kate Janczarek
-            .team-member__subtitle tatoo artist
-          .team-member
-            img.team-member__photo(src="assets/img/artist-3.jpg")
-            .team-member__title Kate Janczarek
-            .team-member__subtitle tatoo artist    
-
-    section#gallery.page-section
-      .wrapper
-        h2.headline Gallery
-        .page-section__content.page-section__content--padding-bot.row--grid 
-          .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
-            img.gallery__item(src="assets/img/gallery_tattoo_1.jpg") 
-          .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
-            img.gallery__item(src="assets/img/gallery_tattoo_1.jpg") 
-          .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
-            img.gallery__item(src="assets/img/gallery_tattoo_2.jpg") 
-          .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
-            img.gallery__item(src="assets/img/gallery_tattoo_2.jpg") 
-          .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
-            img.gallery__item(src="assets/img/gallery_tattoo_3.jpg") 
-          .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
-            img.gallery__item(src="assets/img/gallery_tattoo_3.jpg") 
-          .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
-            img.gallery__item(src="assets/img/gallery_tattoo_4.jpg") 
-          .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
-            img.gallery__item(src="assets/img/gallery_tattoo_4.jpg") 
-          .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
-            img.gallery__item(src="assets/img/gallery_tattoo_5.jpg") 
-          .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
-            img.gallery__item(src="assets/img/gallery_tattoo_5.jpg") 
-          .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
-            img.gallery__item(src="assets/img/gallery_tattoo_6.jpg") 
-          .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
-            img.gallery__item(src="assets/img/gallery_tattoo_6.jpg") 
-        a.btn(href!="#") More
-                
-    section#gallery.page-section
-      .row
-        .col-medium-6
-          .wrapper.wrapper--left
-            h2.headline FAQ
-            .page-section__content.page-section__content--subsection
-              |  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac risus molestie, venenatis erat vitae, lobortis dolor. Aliquam erat volutpat. Aenean velit neque, consequat sollicitudin turpis quis, rhoncus tempor lorem. Quisque vitae dolor eget nunc posuere interdum sed ultrices justo. Quisque laoreet a mauris quis tempor. Phasellus sollicitudin cursus facilisis. Phasellus massa ante, lacinia ac metus eu, dapibus lacinia nisl.
-            a.btn(href!="#") More
-
-        .col-medium-6.background--dark
-          .wrapper.wrapper--right
-            h2.headline Pre care advice
-            .page-section__content.page-section__content--subsection
-              |  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac risus molestie, venenatis erat vitae, lobortis dolor. Aliquam erat volutpat. Aenean velit neque, consequat sollicitudin turpis quis, rhoncus tempor lorem. Quisque vitae dolor eget nunc posuere interdum sed ultrices justo. Quisque laoreet a mauris quis tempor. Phasellus sollicitudin cursus facilisis. Phasellus massa ante, lacinia ac metus eu, dapibus lacinia nisl.
-            a.btn(href!="#") More
+    .home-welcome
+      header.page-section
+        .large-hero
           
-    section#blog.page-section
-      .wrapper
-        h2.headline Blog
-        .page-section__content.page-section__content--padding-bot.row 
-          - var n = 0; 
-          while n < 3
-            -  n++
-            .blog-post
-              .blog-post__header
-                .blog-post__title How to make coll tattoo in 3h
-                .blog-post__author Kate Janczarek
-                .blog-post__date 21.26.2017
-                .blog-post__taxonomy Tattoo, Art, Modern
-              img.blog-post__photo(src!="assets/img/blog-scheme.jpg")
-              .blog-post__excerpt
-                p
-                  strong Aliquam sit amet nisl ullamcorper libero vulputate gravida at eget risus. Nam nec libero eget felis mollis scelerisque at non felis. 
-                  br  
-                  br 
-                |  Proin Eleifend volutpat massa, vitae venenatis quam cursus sit amet. Aenean sed lacus enim. Fusce adipiscing tristique lorem, non pellentesque nisi porta elementum. Pellentesque habitant morbi tristique.  
-        a.btn(href!="#") Read More Posts
+        nav.nav.nav--right
+          ul.nav__list.nav__list--inline
+            li.nav__item
+              a About Us
+            li.nav__item
+              a Our Team
+            li.nav__item
+              a Gallery
+            li.nav__item
+              a FAQ
+            li.nav__item
+              a Pre Care Advice
+            li.nav__item
+              a Tatto Courses
+            li.nav__item
+              a Blog
+            li.nav__item
+              a Contact
+            li.nav__item.nav__item--standout
+              a pl
 
-    section#contact.page-section
-      .row
-        .col-medium-6.background--dark
-          .wrapper.wrapper--left
+        .social-media   
+          ul.social-media__list
+            li.social-media__item F
+            li.social-media__item F
+            li.social-media__item F 
 
-        .col-medium-6
-          .wrapper.wrapper--right  
+      section#about-us.page-section
+        .wrapper.wrapper--small
+          h2.headline About Us
+          .page-section__content.page-section__content--padding-bot
+            |  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac risus molestie, venenatis erat vitae, lobortis dolor. Aliquam erat volutpat. Aenean velit neque, consequat sollicitudin turpis quis, rhoncus tempor lorem. Quisque vitae dolor eget nunc posuere interdum sed ultrices justo. Quisque laoreet a mauris quis tempor. Phasellus sollicitudin cursus facilisis. Phasellus massa ante, lacinia ac metus eu, dapibus lacinia nisl.
+          a.btn(href!="#") More
+
+      section#our-team.page-section
+        .wrapper
+          h2.headline Our team
+          .page-section__content.row        
+            .team-member
+              img.team-member__photo(src="assets/img/artist-1.jpg")
+              .team-member__title Kate Janczarek
+              .team-member__subtitle tatoo artist
+            .team-member
+              img.team-member__photo(src="assets/img/artist-2.jpg")
+              .team-member__title Kate Janczarek
+              .team-member__subtitle tatoo artist
+            .team-member
+              img.team-member__photo(src="assets/img/artist-3.jpg")
+              .team-member__title Kate Janczarek
+              .team-member__subtitle tatoo artist    
+
+      section#gallery.page-section
+        .wrapper
+          h2.headline Gallery
+          .page-section__content.page-section__content--padding-bot.row--grid 
+            .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
+              img.gallery__item(src="assets/img/gallery_tattoo_1.jpg") 
+            .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
+              img.gallery__item(src="assets/img/gallery_tattoo_1.jpg") 
+            .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
+              img.gallery__item(src="assets/img/gallery_tattoo_2.jpg") 
+            .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
+              img.gallery__item(src="assets/img/gallery_tattoo_2.jpg") 
+            .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
+              img.gallery__item(src="assets/img/gallery_tattoo_3.jpg") 
+            .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
+              img.gallery__item(src="assets/img/gallery_tattoo_3.jpg") 
+            .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
+              img.gallery__item(src="assets/img/gallery_tattoo_4.jpg") 
+            .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
+              img.gallery__item(src="assets/img/gallery_tattoo_4.jpg") 
+            .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
+              img.gallery__item(src="assets/img/gallery_tattoo_5.jpg") 
+            .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
+              img.gallery__item(src="assets/img/gallery_tattoo_5.jpg") 
+            .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
+              img.gallery__item(src="assets/img/gallery_tattoo_6.jpg") 
+            .col-small-6.col-medium-3.col-large-2.col-gutter--gallery
+              img.gallery__item(src="assets/img/gallery_tattoo_6.jpg") 
+          a.btn(href!="#") More
+                  
+      section#gallery.page-section
+        .row
+          .col-medium-6
+            .wrapper.wrapper--left
+              h2.headline FAQ
+              .page-section__content.page-section__content--subsection
+                |  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac risus molestie, venenatis erat vitae, lobortis dolor. Aliquam erat volutpat. Aenean velit neque, consequat sollicitudin turpis quis, rhoncus tempor lorem. Quisque vitae dolor eget nunc posuere interdum sed ultrices justo. Quisque laoreet a mauris quis tempor. Phasellus sollicitudin cursus facilisis. Phasellus massa ante, lacinia ac metus eu, dapibus lacinia nisl.
+              a.btn(href!="#") More
+
+          .col-medium-6.background--dark
+            .wrapper.wrapper--right
+              h2.headline Pre care advice
+              .page-section__content.page-section__content--subsection
+                |  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac risus molestie, venenatis erat vitae, lobortis dolor. Aliquam erat volutpat. Aenean velit neque, consequat sollicitudin turpis quis, rhoncus tempor lorem. Quisque vitae dolor eget nunc posuere interdum sed ultrices justo. Quisque laoreet a mauris quis tempor. Phasellus sollicitudin cursus facilisis. Phasellus massa ante, lacinia ac metus eu, dapibus lacinia nisl.
+              a.btn(href!="#") More
+            
+      section#blog.page-section
+        .wrapper
+          h2.headline Blog
+          .page-section__content.page-section__content--padding-bot.row 
+            - var n = 0; 
+            while n < 3
+              -  n++
+              .blog-post
+                .blog-post__header
+                  .blog-post__title How to make coll tattoo in 3h
+                  .blog-post__author Kate Janczarek
+                  .blog-post__date 21.26.2017
+                  .blog-post__taxonomy Tattoo, Art, Modern
+                img.blog-post__photo(src!="assets/img/blog-scheme.jpg")
+                .blog-post__excerpt
+                  p
+                    strong Aliquam sit amet nisl ullamcorper libero vulputate gravida at eget risus. Nam nec libero eget felis mollis scelerisque at non felis. 
+                    br  
+                    br 
+                  |  Proin Eleifend volutpat massa, vitae venenatis quam cursus sit amet. Aenean sed lacus enim. Fusce adipiscing tristique lorem, non pellentesque nisi porta elementum. Pellentesque habitant morbi tristique.  
+          a.btn(href!="#") Read More Posts
+
+      section#contact.page-section
+        .row
+          .col-medium-6.background--dark
+            .wrapper.wrapper--left
+
+          .col-medium-6
+            .wrapper.wrapper--right  
 
       
-
-
-
-      
     
 
     
     
-    script(src="assets/app/app.js")    
+    //- script(src="assets/app/app.js")    
