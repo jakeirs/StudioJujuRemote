@@ -6,7 +6,7 @@ html
     title Juju Studio
     link(rel="stylesheet" href="assets/stylesheets/main.css") 
   body
-    .home-welcome
+    #home-welcome
       header.page-section
         .large-hero
           
@@ -47,7 +47,7 @@ html
       section#our-team.page-section
         .wrapper
           h2.headline Our team
-          .page-section__content.row        
+          .page-section__content.row.row--space-around        
             .team-member
               img.team-member__photo(src="assets/img/artist-1.jpg")
               .team-member__title Kate Janczarek
@@ -91,8 +91,8 @@ html
               img.gallery__item(src="assets/img/gallery_tattoo_6.jpg") 
           a.btn(href!="#") More
                   
-      section#gallery.page-section
-        .row
+      section#info.page-section
+        .row--grid
           .col-medium-6
             .wrapper.wrapper--left
               h2.headline FAQ
@@ -110,7 +110,7 @@ html
       section#blog.page-section
         .wrapper
           h2.headline Blog
-          .page-section__content.page-section__content--padding-bot.row 
+          .page-section__content.page-section__content--padding-bot.row.row--space-around
             - var n = 0; 
             while n < 3
               -  n++
@@ -133,6 +133,22 @@ html
         .row
           .col-medium-6.background--dark
             .wrapper.wrapper--left
+              .row.row--space-between.row--center-vertical
+                .contact-details
+                  | JUJU Tattoo Studio
+                  br
+                  | +48 600 600 600
+                  br
+                  | hello@juju.co.uk
+                  br
+                  | Picadyly street 883A
+                  br
+                  | London
+                  
+                form.contact-form  
+                  fieldset
+                    input#email(name="email" type="email" placeholder="your email" )
+                    textarea#message(name="name" placeholder="your message" )
 
           .col-medium-6
             .wrapper.wrapper--right  

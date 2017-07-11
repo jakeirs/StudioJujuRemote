@@ -38,9 +38,25 @@ $columnCount: 12;
   flex-wrap: wrap;  
   justify-content: center;
   
-  @include atSmall {
-    justify-content: space-around;    
+  &--space-around {
+    @include atSmall {
+      justify-content: space-around;    
+    }
   }
+
+  &--space-between {
+    @include atSmall {
+      justify-content: space-between;    
+    }
+  }
+
+  &--center-vertical {
+    @include atSmall {
+      height: 100%;
+      align-items: center;    
+    }
+  }
+
 
   &--grid {    
   @extend %clearfix;
