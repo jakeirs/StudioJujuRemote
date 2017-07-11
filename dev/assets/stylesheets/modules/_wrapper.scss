@@ -10,7 +10,7 @@
 
   &--left {    
     max-width: 970px;
-    margin-left: auto;
+    margin-right: 0;
     padding: 50px 25px;
     @include atMedium {
       padding: 60px 70px;
@@ -20,11 +20,17 @@
 
   &--right {
     max-width: 970px;
-    margin-right: auto;
+    margin-left: 0;
     padding: 50px 25px;
     @include atMedium {
       padding: 60px 70px;
       text-align: left;
+    }
+  }
+
+  &--contact {
+    @include atLarge {      
+    padding-right: 165px;
     }
   }
 }  

@@ -132,23 +132,24 @@ html
       section#contact.page-section
         .row
           .col-medium-6.background--dark
-            .wrapper.wrapper--left
-              .row.row--space-between.row--center-vertical
-                .contact-details
-                  | JUJU Tattoo Studio
-                  br
-                  | +48 600 600 600
-                  br
-                  | hello@juju.co.uk
-                  br
-                  | Picadyly street 883A
-                  br
-                  | London
-                  
-                form.contact-form  
-                  fieldset
-                    input#email(name="email" type="email" placeholder="your email" )
-                    textarea#message(name="name" placeholder="your message" )
+            .wrapper.wrapper--left.wrapper--contact
+              .row--grid.row--center-vertical
+                .col-large-6
+                  .contact-details
+                    | JUJU Tattoo Studio
+                    br
+                    | +48 600 600 600
+                    br
+                    | hello@juju.co.uk
+                    br
+                    | Picadyly street 883A
+                    br
+                    | London
+                .col-large-6  
+                  form.contact-form  
+                    fieldset
+                      input#email.input(name="email" type="email" placeholder="your email" )
+                      textarea#message.input.input--textarea(name="name" placeholder="your message" )
 
           .col-medium-6
             .wrapper.wrapper--right  

@@ -1,3 +1,10 @@
 .contact-details {
+  margin-bottom: 40px;
   line-height: 2;
+}
+
+.contact-form {
+  @include atLarge {
+    padding-left: 40px;
+  }
 }
