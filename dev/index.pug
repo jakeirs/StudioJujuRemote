@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+doctype html
 html
   head
     meta(charset="UTF-8")
@@ -7,35 +7,35 @@ html
     link(rel="stylesheet" href="assets/stylesheets/main.css") 
   body
     #home-welcome
-      header.page-section
+      header.page-section.page-section--first
         .large-hero
-          
-        nav.nav.nav--right
-          ul.nav__list.nav__list--inline
-            li.nav__item
-              a About Us
-            li.nav__item
-              a Our Team
-            li.nav__item
-              a Gallery
-            li.nav__item
-              a FAQ
-            li.nav__item
-              a Pre Care Advice
-            li.nav__item
-              a Tatto Courses
-            li.nav__item
-              a Blog
-            li.nav__item
-              a Contact
-            li.nav__item.nav__item--standout
-              a pl
+        .wrapper.row--grid  
+          nav.nav.nav--right
+            ul.nav__list.nav__list--inline
+              li.nav__item
+                a.nav__link(href="") About Us
+              li.nav__item
+                a.nav__link(href="") Our Team
+              li.nav__item
+                a.nav__link(href="") Gallery
+              li.nav__item
+                a.nav__link(href="") FAQ
+              li.nav__item
+                a.nav__link(href="") Pre Care Advice
+              li.nav__item
+                a.nav__link(href="") Tatto Courses
+              li.nav__item
+                a.nav__link(href="") Blog
+              li.nav__item
+                a.nav__link(href="") Contact
+              li.nav__item.nav__item--standout
+                a.nav__link(href="") pl
 
-        .social-media   
-          ul.social-media__list
-            li.social-media__item F
-            li.social-media__item F
-            li.social-media__item F 
+          .social-media   
+            ul.social-media__list
+              li.social-media__item F
+              li.social-media__item F
+              li.social-media__item F 
 
       section#about-us.page-section
         .wrapper.wrapper--small
@@ -129,7 +129,7 @@ html
                   |  Proin Eleifend volutpat massa, vitae venenatis quam cursus sit amet. Aenean sed lacus enim. Fusce adipiscing tristique lorem, non pellentesque nisi porta elementum. Pellentesque habitant morbi tristique.  
           a.btn(href!="#") Read More Posts
 
-      section#contact.page-section
+      section#contact.page-section.page-section--last
         .row
           .col-medium-6.background--dark
             .wrapper.wrapper--left.wrapper--contact
@@ -152,8 +152,25 @@ html
                       textarea#message.input.input--textarea(name="name" placeholder="your message" )
 
           .col-medium-6
-            .wrapper.wrapper--right  
+            .wrapper.wrapper--right.wrapper--map
+              #map
+              script.
+                var map;
+                function initMap() {
+                  map = new google.maps.Map(document.getElementById('map'), {
+                    center: {lat: 51.5064012, lng: -0.1345676},
+                    zoom: 15
+                  });
+                }   
 
+      footer.footer
+        .wrapper.row.row--space-between
+          .copyright copyright JUJU 2017 all rights reserved 
+          .site_authors design: jamuszyn coding: Surfidea
+
+
+    script( src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzIsA0S_k4NKfSUzhvo98IK89_70fVpjA&callback=initMap" async defer)
+    
       
     
 

@@ -1,6 +1,8 @@
 .nav {
-  padding-top: 60px;
-  padding-right: 60px;
+  padding-top: 40px;
+  @include atSmall {
+    padding-top: 60px;
+  }  
 
   &--right {
     float: right;
@@ -25,6 +27,14 @@
     &--standout {
       color: $secondaryColor;
       font-weight: 700;
+    }
+  }
+
+  &__link {
+    line-height: 2;
+    transition: $animationTime;
+    &:hover {
+      color: $secondaryColor;
     }
   }
 }

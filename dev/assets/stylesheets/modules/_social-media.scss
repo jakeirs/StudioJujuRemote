@@ -1,9 +1,12 @@
 .social-media {
+  position: fixed;
+  left: 0;
+  top: 85%;
   
   &__list {
+    
+
     list-style: none;
-    margin: 0;
-    padding: 0;
     vertical-align: middle;
     display: inline-block;
     // width: 40px;

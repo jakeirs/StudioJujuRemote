@@ -1,20 +1,10 @@
-.page-section {
+.page-section {  
+  padding-top: 70px;
+  padding-bottom: 70px;  
 
-  &:not(:first-child) {
-    padding-top: 70px;
-  }  
-  &:not(:last-child) {
-    padding-bottom: 70px;
-  }
-
-  @include atMedium {
-
-    &:not(:first-child) {
-    padding-top: 125px;
-    }  
-    &:not(:last-child) {
-      padding-bottom: 125px;
-    }
+  @include atMedium {    
+    padding-top: 125px; 
+    padding-bottom: 125px;    
   }
 
   &__content {
@@ -28,6 +18,14 @@
     &--padding-bot {      
       padding-bottom: 90px;
     }
+  }
+
+  &--last {
+    padding-bottom: 0;
+  }
+
+  &--first {
+    padding-top: 0;
   }
 }
 

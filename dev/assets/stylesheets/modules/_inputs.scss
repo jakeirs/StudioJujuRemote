@@ -15,6 +15,7 @@ $placeholderColor: #fff;
     font-size: 0.875rem;
     font-weight: 400;
     color: inherit;    
+    transition: $animationTime;
 
     &--textarea {
       min-height: 135px;

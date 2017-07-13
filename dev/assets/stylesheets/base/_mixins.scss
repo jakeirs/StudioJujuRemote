@@ -25,7 +25,7 @@
 }
 
 @mixin atExtraLarge {
-  @media (min-width: $Extralarge) {
+  @media (min-width: $extraLarge) {
     @content;
   }
 }
