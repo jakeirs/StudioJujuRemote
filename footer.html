@@ -1,0 +1,45 @@
+
+<section class="page-section page-section--last" id="contact">
+  <div class="row">
+    <div class="col-medium-6 background--dark">
+      <div class="wrapper wrapper--left wrapper--contact">
+        <div class="row--grid row--center-vertical">
+          <div class="col-large-6">
+            <div class="contact-details">JUJU Tattoo Studio<br>+48 600 600 600<br>hello@juju.co.uk<br>Picadyly street 883A<br>London</div>
+          </div>
+          <div class="col-large-6"> 
+            <form class="contact-form"> 
+              <fieldset>
+                <input class="input" id="email" name="email" type="email" placeholder="your email">
+                <textarea class="input input--textarea" id="message" name="name" placeholder="your message"></textarea>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-medium-6">
+      <div class="wrapper wrapper--right wrapper--map">
+        <div id="map"></div>
+        <script>
+          var map;
+          function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 51.5064012, lng: -0.1345676},
+              zoom: 15
+            });
+          }   
+          
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+  <div class="wrapper row row--space-between">
+    <div class="copyright">copyright JUJU 2017 all rights reserved </div>
+    <div class="site_authors">design: jamuszyn coding: Surfidea</div>
+  </div>
+</footer>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzIsA0S_k4NKfSUzhvo98IK89_70fVpjA&amp;callback=initMap" async defer></script>
+<script src="assets/scripts/app.js">   </script>
