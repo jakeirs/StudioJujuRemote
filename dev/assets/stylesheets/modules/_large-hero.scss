@@ -4,6 +4,7 @@ $hero--height: 85vh;
 .large-hero {
   background: url(../img/hero-image.jpg) 50%;
   background-size: cover;    
+  position: relative;
   width: 100%;
   height: $hero--height;
   // max-height: $hero--max-height;

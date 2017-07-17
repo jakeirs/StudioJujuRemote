@@ -12,8 +12,8 @@ gulp.task('clean', function() {
 
 //copy JS directory
 gulp.task('copyJS', function(){
-  var src = "./dev/assets/app";
-  var dist = "./build/assets/app";
+  var src = "./dev/assets/scripts";
+  var dist = "./build/assets/scripts";
   fs.copySync(src, dist);
 })
 
@@ -60,7 +60,7 @@ gulp.task('pug', function() {
 
 // browserSync
 gulp.task('browser-sync', function(){
-  browserSync.init(['build/assets/stylesheets/*.css', 'dev/assets/app/**/*.js', 'build/assets/app/*.js', 'build/index.html'],
+  browserSync.init(['build/assets/stylesheets/*.css', 'dev/assets/scripts/**/*.js', 'build/assets/scripts/*.js', 'build/index.html'],
     {
       server: {
         baseDir: "./build/"
@@ -72,6 +72,6 @@ gulp.task('browser-sync', function(){
 gulp.task('watch', ['clean', 'copyJS', 'copyImg','sass', 'pug', 'browser-sync'], function(){
   gulp.watch(['./dev/assets/stylesheets/**/*.scss'], ['sass']);
   gulp.watch(['./dev/*.pug'], ['pug'] );
-  gulp.watch(['./dev/assets/app/*.js'], ['copyJS']);
+  gulp.watch(['./dev/assets/scripts/*.js'], ['copyJS']);
   gulp.watch(['./dev/assets/img/*.*'], ['copyImg'])
 })
