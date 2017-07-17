@@ -1,0 +1,18 @@
+.breadcrumbs {
+  &__item {
+    display: inline-block;
+
+    &--current {
+      text-decoration: underline;
+    }
+  }
+
+  &__link {
+    transition: $animationTime;
+    
+    &:hover {
+      color: $secondaryColor;
+    }
+  }
+}
+

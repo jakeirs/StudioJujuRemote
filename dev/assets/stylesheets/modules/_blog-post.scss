@@ -8,10 +8,22 @@
     &:not(:last-child) {
       margin-bottom: 0;
     }
-  }
+  }  
   
   @include atMedium {
-    width: 28%;
+    width: 28%;  
+  }
+
+  &--margin-bot {
+    margin-bottom: 70px!important;    
+    @include atMedium {
+      margin-bottom: 120px!important;
+    }
+  }
+
+  &--content {
+    max-width: none;
+    width: 100%;
   }
 
   &__header {
@@ -22,6 +34,10 @@
   &__title {
     font-size: 1.5rem;
     line-height: 1.5;
+    
+    &--large {
+      font-size: 2.25rem;
+    }
   }
 
   &__author,
@@ -42,9 +58,14 @@
     color: $lightGrey;
   }
 
-  &__photo {
-    margin-bottom: 35px;
+  &__photo {    
     width: 100%;
+    margin-bottom: 35px;
+    
+    &--content {      
+      max-width: 810px; 
+      margin-bottom: 60px;     
+    }
   }
 
   &__excerpt {

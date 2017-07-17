@@ -1,0 +1,24 @@
+include header
+section#blog.page-section
+  .wrapper
+    h2.headline Blog
+    .page-section__content.row.row--space-around
+      - var n = 0; 
+      while n < 12
+        -  n++
+        .blog-post.blog-post--margin-bot
+          .blog-post__header
+            .blog-post__title How to make coll tattoo in 3h
+            .blog-post__author Kate Janczarek
+            .blog-post__date 21.26.2017
+            .blog-post__taxonomy Tattoo, Art, Modern
+          img.blog-post__photo(src!="assets/img/blog-scheme.jpg")
+          .blog-post__excerpt
+            p
+              strong Aliquam sit amet nisl ullamcorper libero vulputate gravida at eget risus. Nam nec libero eget felis mollis scelerisque at non felis. 
+              br  
+              br 
+            |  Proin Eleifend volutpat massa, vitae venenatis quam cursus sit amet. Aenean sed lacus enim. Fusce adipiscing tristique lorem, non pellentesque nisi porta elementum. Pellentesque habitant morbi tristique.  
+    a.btn(href!="#") Read More Posts
+
+include footer
