@@ -12,12 +12,6 @@ gulp.task('clean', function() {
   console.log("Success deleted");
 });
 
-//copy JS directory
-gulp.task('copyJS', function(){
-  var src = "./dev/assets/scripts";
-  var dist = "./build/assets/scripts";
-  fs.copySync(src, dist);
-})
 
 //copy img directory
 gulp.task('copyImg', function(){
@@ -46,6 +40,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./build/assets/stylesheets/'));
 });
 
+
 // pug
 gulp.task('pug', function() {
   return gulp.src('./dev/*.pug')
@@ -60,11 +55,12 @@ gulp.task('pug', function() {
   .pipe(gulp.dest('./build/'))
 });
 
+
 // pug refresh after 'pug' task's finished
 gulp.task('pugRefresh', ['pug'], function() {
-  console.log('refreshPug');
   browserSync.reload();
 });
+
 
 // browserSync
 gulp.task('browser-sync', function(){
@@ -76,23 +72,27 @@ gulp.task('browser-sync', function(){
     });
 });
 
+
 // webpack for scripts
 gulp.task('scripts', function(callback) {
   webpack( require('./webpack.config.js'), function(err, stats) {
     if (err) {
       console.log( err.toString() );
     }
-
      console.log( stats.toString() );
     callback();
   });
-})
+});
+
+// scripts refresh after 'scripts' task's finished
+gulp.task('scriptsRefresh', ['scripts'], function(){
+  browserSync.reload();
+});
 
 // watch
-gulp.task('watch', ['clean', 'copyJS', 'copyImg','sass', 'pug', 'browser-sync'], function(){
+gulp.task('watch', ['clean', 'scripts', 'copyImg','sass', 'pug', 'browser-sync'], function(){
   gulp.watch(['./dev/assets/stylesheets/**/*.scss'], ['sass']);
   gulp.watch(['./dev/*.pug'], ['pugRefresh'] );
-  // gulp.watch(['./dev/assets/scripts/*.js'], ['copyJS']);
-  gulp.watch(['./dev/assets/img/*.*'], ['copyImg']);
-  gulp.watch(['./dev/assets/scripts/**/*.js'], ['scripts']);
+  gulp.watch(['./dev/assets/scripts/**/*.js'], ['scriptsRefresh']);
+  gulp.watch(['./dev/assets/img/*.*'], ['copyImg']); 
 })
