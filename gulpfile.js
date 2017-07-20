@@ -1,8 +1,10 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var pug = require('gulp-pug');
-var browserSync = require('browser-sync');
-var fs = require('fs-extra');
+var gulp = require('gulp'),
+sass = require('gulp-sass'),
+pug = require('gulp-pug'),
+browserSync = require('browser-sync'),
+webpack = require('webpack'),
+fs = require('fs-extra');
+
 
 // delete build directory
 gulp.task('clean', function() {
@@ -58,9 +60,15 @@ gulp.task('pug', function() {
   .pipe(gulp.dest('./build/'))
 });
 
+// pug refresh after 'pug' task's finished
+gulp.task('pugRefresh', ['pug'], function() {
+  console.log('refreshPug');
+  browserSync.reload();
+});
+
 // browserSync
 gulp.task('browser-sync', function(){
-  browserSync.init(['build/assets/stylesheets/*.css', 'dev/assets/scripts/**/*.js', 'build/assets/scripts/*.js', 'build/index.html'],
+  browserSync.init(['build/assets/stylesheets/*.css', 'dev/assets/scripts/**/*.js', 'build/assets/scripts/*.js'],
     {
       server: {
         baseDir: "./build/"
@@ -68,10 +76,23 @@ gulp.task('browser-sync', function(){
     });
 });
 
+// webpack for scripts
+gulp.task('scripts', function(callback) {
+  webpack( require('./webpack.config.js'), function(err, stats) {
+    if (err) {
+      console.log( err.toString() );
+    }
+
+     console.log( stats.toString() );
+    callback();
+  });
+})
+
 // watch
 gulp.task('watch', ['clean', 'copyJS', 'copyImg','sass', 'pug', 'browser-sync'], function(){
   gulp.watch(['./dev/assets/stylesheets/**/*.scss'], ['sass']);
-  gulp.watch(['./dev/*.pug'], ['pug'] );
-  gulp.watch(['./dev/assets/scripts/*.js'], ['copyJS']);
-  gulp.watch(['./dev/assets/img/*.*'], ['copyImg'])
+  gulp.watch(['./dev/*.pug'], ['pugRefresh'] );
+  // gulp.watch(['./dev/assets/scripts/*.js'], ['copyJS']);
+  gulp.watch(['./dev/assets/img/*.*'], ['copyImg']);
+  gulp.watch(['./dev/assets/scripts/**/*.js'], ['scripts']);
 })

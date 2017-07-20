@@ -1,11 +1,14 @@
 $hero--height: 85vh;
-// $hero--max-height: 700px;
 
-.large-hero {
-  background: url(../img/hero-image.jpg) 50%;
-  background-size: cover;    
-  position: relative;
+.large-hero {  
   width: 100%;
   height: $hero--height;
-  // max-height: $hero--max-height;
+  position: relative;
+  background: url(../img/hero-image.jpg) 50%;
+  background-size: cover;    
+
+  &--subpage {    
+    max-height: 270px;
+    background-position-y: -28px; // adjusted background img as in design project
+  }
 }
