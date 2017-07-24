@@ -1,0 +1,21 @@
+.navbar {
+  width: 100%;
+  position: relative;
+  background: #ffffff;
+  height: 60px;
+
+  &__bar--left {
+  }
+
+  &__bar--right {
+  }
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    .nav {
+      padding-top: 0;
+    }
+  }
+} 
