@@ -90,7 +90,7 @@ gulp.task('scriptsRefresh', ['scripts'], function(){
 });
 
 // watch
-gulp.task('watch', ['clean', 'scripts', 'copyImg','sass', 'pug', 'browser-sync'], function(){
+gulp.task('watch', ['pug', 'scripts', 'copyImg','sass', 'browser-sync'], function(){
   gulp.watch(['./dev/assets/stylesheets/**/*.scss'], ['sass']);
   gulp.watch(['./dev/*.pug'], ['pugRefresh'] );
   gulp.watch(['./dev/assets/scripts/**/*.js'], ['scriptsRefresh']);

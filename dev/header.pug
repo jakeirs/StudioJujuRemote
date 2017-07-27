@@ -9,33 +9,38 @@ html
     #home-welcome
       header.page-section.page-section--first
         .large-hero.large-hero--subpage
-          .logo.logo--subpage
+          .logo--large-hero.logo.logo--subpage
             include ./assets/img/juju-studio.svg
             
-        .wrapper.row--grid  
-          nav.nav.nav--right
-            ul.nav__list.nav__list--inline
-              li.nav__item
-                a.nav__link(href="") About Us
-              li.nav__item
-                a.nav__link(href="") Our Team
-              li.nav__item
-                a.nav__link(href="") Gallery
-              li.nav__item
-                a.nav__link(href="") FAQ
-              li.nav__item
-                a.nav__link(href="") Pre Care Advice
-              li.nav__item
-                a.nav__link(href="") Tatto Courses
-              li.nav__item
-                a.nav__link(href="") Blog
-              li.nav__item
-                a.nav__link(href="") Contact
-              li.nav__item.nav__item--standout
-                a.nav__link(href="") pl
+        #navbar.navbar
+          .wrapper.wrapper--navbar
+            .navbar__bar--left
+              .logo.logo-navbar
+                include ./assets/img/juju-studio.svg 
+            .navbar__bar--right        
+              nav#nav.nav.nav--right
+                ul.nav__list.nav__list--inline
+                  li.nav__item
+                    a.nav__link(href="") About Us
+                  li.nav__item
+                    a.nav__link(href="") Our Team
+                  li.nav__item
+                    a.nav__link(href="") Gallery
+                  li.nav__item
+                    a.nav__link(href="") FAQ
+                  li.nav__item
+                    a.nav__link(href="") Pre Care Advice
+                  li.nav__item
+                    a.nav__link(href="") Tatto Courses
+                  li.nav__item
+                    a.nav__link(href="") Blog
+                  li.nav__item
+                    a.nav__link(href="") Contact
+                  li.nav__item.nav__item--standout
+                    a.nav__link(href="") pl
 
-          .social-media   
-            ul.social-media__list
-              li.social-media__item F
-              li.social-media__item F
-              li.social-media__item F 
+              .social-media   
+                ul.social-media__list
+                  li.social-media__item F
+                  li.social-media__item F
+                  li.social-media__item F 

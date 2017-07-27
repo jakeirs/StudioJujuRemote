@@ -2,7 +2,6 @@
   width: 100%;
   position: relative;
   background: #ffffff;
-  height: 60px;
 
   &__bar--left {
   }
@@ -10,6 +9,7 @@
   &__bar--right {
   }
 
+  // class added dynamically by JS
   &--fixed {
     position: fixed;
     top: 0;

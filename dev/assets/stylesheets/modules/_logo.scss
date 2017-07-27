@@ -13,19 +13,18 @@
   &-navbar {
     height: 80px;
     transition: transform 0.5s ease-in-out,
-        background-color .1s ease-in-out,
         opacity 0.5s ease-in-out,
         scale 1.6s ease-in-out;
-    transform: translateY(-100%) translateX(100%) scale(2);  
+    transform: scale(1.5);  
     opacity: 0;
     text-align: left;
 
+    // class added dynamically by JS
     &--is-visible {
-      transform: translateY(0) translateX(0) scale(1);   
+      transform:  scale(1);   
       opacity: 1;   
       svg {
-        width: 50%;
-        background: #fff;
+        // width: 50%;
       }
     }
 

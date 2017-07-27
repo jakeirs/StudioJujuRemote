@@ -8,7 +8,8 @@
   transition: $animationTime;
 
   &:hover {
-    background-color: $primaryColor; 
+    background-color: $primaryColorDark; 
     color: #fff;
+    font-weight: 400;
   }
 }
